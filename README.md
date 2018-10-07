@@ -70,7 +70,6 @@ given by the weighted average:
 
 \[
 \begin{gather}
-\label{f.exp}
 f_i = \frac{1}{3} f_i^{FD} + \frac{1}{3} f_i^{FP} + \frac{1}{3} f_i^{L}
 \end{gather}
 \]
@@ -93,7 +92,7 @@ points but perhaps that prediction is actually based on a range with 25
 just being the average. One way to capture this type of uncertainty is
 through the value \(f_i^L\).
 
-![](rmd/figures/beast_mode.png)<!-- -->
+![](figures/beast_mode.png)<!-- -->
 
 The figure  shows all of Lynch’s past performances through week nine of
 the 2015 season. The variability in the performances is presumably due
@@ -161,7 +160,7 @@ problem. Thus, for each of the draws, two solutions were found.
 Typically, these solutions were the same but in some cases they differed
 due to differences in the algorithms used by each of the packages.
 
-![](rmd/figures/team_freq_intro.png)<!-- -->
+![](figures/team_freq_intro.png)<!-- -->
 
 The figure above shows the results from applying this resampling method.
 Team A consisting of:
@@ -191,7 +190,7 @@ With this in mind, an additional metric likely to be useful is the
 frequency of times a certain player is on the optimal team. The figure
 below illustrates these frequencies.
 
-![](rmd/figures/player_freq_intro.png)<!-- -->
+![](figures/player_freq_intro.png)<!-- -->
 
 We can see that Alshon Jeffery, Antonio Gates, Brandon Marshall, and
 Robbie Gould were members of every winning team. We could further look

@@ -59,7 +59,6 @@ One possible belief could be that player $i$'s expected $f_i$ is given by the we
 
 $$
 \begin{gather}
-\label{f.exp}
 f_i = \frac{1}{3} f_i^{FD} + \frac{1}{3} f_i^{FP} + \frac{1}{3} f_i^{L}
 \end{gather}
 $$
@@ -68,7 +67,7 @@ where $f_i^{FD}$ is a weighted average of player $i$'s past performances provide
 
 One limitation of values like $f_i^{FD}$ and $f_i^{FP}$ is that they are deterministic and do not come with any associated measure of error.  For example, FantasyPro's might predict Marshawn Lynch will score 25 points but perhaps that prediction is actually based on a range with 25 just being the average.  One way to capture this type of uncertainty is through the value $f_i^L$.
 
-![](rmd/figures/beast_mode.png)<!-- -->
+![](figures/beast_mode.png)<!-- -->
 
 The figure \ref{beast.mode} shows all of Lynch's past performances through week nine of the 2015 season.  The variability in the performances is presumably due to a variety of factors.  For example, Lynch's top performances all occur during home games.  Other factors might include the strength of the opposing team's defense, Lynch's health, performances by Lynch's teammates, etc.  The sheer number of likely contributors to any one performance is why they are so hard to predict.
 
@@ -95,7 +94,7 @@ The set of available players for the fantasy team was refined from those actuall
 
 A total of 100,000 samples were taken from the $F_i^L$'s.  The linear programming packages *lpSolve* and *Rglpk* were used to solve the problem.  Thus, for each of the draws, two solutions were found.  Typically, these solutions were the same but in some cases they differed due to differences in the algorithms used by each of the packages.
 
-![](rmd/figures/team_freq_intro.png)<!-- -->
+![](figures/team_freq_intro.png)<!-- -->
 
 The figure above shows the results from applying this resampling method.  Team A consisting of:
 
@@ -115,6 +114,6 @@ More distressing is the fact that such high team frequencies are much less likel
 
 With this in mind, an additional metric likely to be useful is the frequency of times a certain player is on the optimal team.  The figure below illustrates these frequencies.
 
-![](rmd/figures/player_freq_intro.png)<!-- -->
+![](figures/player_freq_intro.png)<!-- -->
 
 We can see that Alshon Jeffery, Antonio Gates, Brandon Marshall, and Robbie Gould were members of every winning team.  We could further look at frequency plots based on position to better improve player selection.
