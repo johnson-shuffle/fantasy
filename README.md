@@ -18,7 +18,7 @@ $$
 
 where $\mathbf{x}$ denotes a vector of binary variables corresponding to all available fantasy players, $\mathbf{f}$ denotes the vector of fantasy points each of these players scores, and $\mathbf{p}$ denotes the vector of each player's salary. The operator $\cdot$ denotes the dot product.
 
-The goal is to choose a set of players – denoted by the vector $\mathbf{x}$ – that maximizes total fantasy points while also satisfying the constraints: (i) $\mathbf{x}$ is an "eligible" team consisting of one quarterback, two running backs, three wide receivers, one tight end, one place kicker, and one team defense (ii) the cost of $\mathbf{x}$ is less than the $60,000 salary cap. FanDuel imposes two more nuanced eligibility constraints as well: (iii) $\mathbf{x}$ can contain at most four players from one team (iv) $\mathbf{x}$ must contain players from at least three different teams.
+The goal is to choose a set of players – denoted by the vector $\mathbf{x}$ – that maximizes total fantasy points while also satisfying the constraints: (i) $\mathbf{x}$ is an "eligible" team consisting of one quarterback, two running backs, three wide receivers, one tight end, one place kicker, and one team defense (ii) the cost of $\mathbf{x}$ is less than the \$60,000 salary cap. FanDuel imposes two more nuanced eligibility constraints as well: (iii) $\mathbf{x}$ can contain at most four players from one team (iv) $\mathbf{x}$ must contain players from at least three different teams.
 
 This optimization problem is made somewhat more complicated by the fact that the elements of $\mathbf{x}$ are binary:
 
