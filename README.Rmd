@@ -19,11 +19,10 @@ Winning at FanDuel requires solving the following problem:
 $$
 \begin{aligned}
 \max_{\mathbf{x}} & \quad \mathbf{f} \cdot \mathbf{x} \\
-\text{subject to} & \quad \left\{
-	\begin{array}{l}
+\text{subject to} & \quad \begin{cases}
 	\mathbf{x} \text{ is an "eligible" team} \\
-	\mathbf{p} \cdot \mathbf{x} \leq \$60{,}000
-	\end{array} \right.
+	\mathbf{p} \cdot \mathbf{x} \le \$60{,}000
+\end{cases}
 \end{aligned}
 $$
 
@@ -34,11 +33,10 @@ The goal is to choose a set of players -- denoted by the vector $\mathbf{x}$ -- 
 This optimization problem is made somewhat more complicated by the fact that the elements of $\mathbf{x}$ are binary:
 
 $$
-x_i = \left \{
-	\begin{array}{ll}
+x_i = \begin{cases}
 	1 & \text{if player } i \text{ is chosen} \\
 	0 & \text{otherwise}
-	\end{array} \right.
+\end{cases}
 $$
 
 However, the problem is still easily solved using a computer.  
@@ -46,7 +44,7 @@ However, the problem is still easily solved using a computer.
 What makes the problem challenging is that the vector $\mathbf{f}$ is unknown prior to choosing $\mathbf{x}$.  Only after teams are chosen does the realization of $\mathbf{f}$ occur.  Thus, the objective is more accurately described by:
 
 $$
-\max_{\mathbf{x}} \; \mathbb{E} \left[ \mathbf{f} \cdot \mathbf{x} \right ]
+\max_{\mathbf{x}} \; \mathbb{E} [ \mathbf{f} \cdot \mathbf{x} ]
 $$
 
 where **expected** points are being maximized and $\mathbf{f}$ is recognized as being stochastic.  Thus, winning at FanDuel depends critically on one's belief about which realization of $\mathbf{f}$ is most likely to occur.
