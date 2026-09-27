@@ -1,5 +1,9 @@
 rm(list=ls())
-source("~/GoogleDrive/Research/Fantasy/scripts/fantasy.Rprofile")
+if (file.exists("scripts/setup.R")) {
+  source("scripts/setup.R")
+} else if (file.exists("../scripts/setup.R")) {
+  source("../scripts/setup.R")
+}
 
 #---------------------------------------------------------------------------------
 # 2015 team rosters

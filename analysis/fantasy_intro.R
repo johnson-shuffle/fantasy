@@ -2,7 +2,11 @@
 # Preample
 #---------------------------------------------------------------------------------
 rm(list = ls())
-source("~/GoogleDrive/Research/Fantasy/fantasy.Rprofile")
+if (file.exists("scripts/setup.R")) {
+  source("scripts/setup.R")
+} else if (file.exists("../scripts/setup.R")) {
+  source("../scripts/setup.R")
+}
 
 #---------------------------------------------------------------------------------
 # ESPN stats - FanDuel scoring
@@ -71,7 +75,7 @@ ggsave(paste0(dtex, "figures/beast_mode.pdf"), bm, height = 5, width = 10)
 #---------------------------------------------------------------------------------
 # Simulation results
 #---------------------------------------------------------------------------------
-load(paste0(dfantasy, "week_9_sims.Rda"))
+load(paste0(dsims, "week_9_sims.Rda"))
 
 #---------------------------------------------------------------------------------
 # Teams

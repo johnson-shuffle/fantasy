@@ -2,7 +2,11 @@
 # Preample
 #---------------------------------------------------------------------------------
 rm(list = ls())
-source("~/GoogleDrive/Research/Fantasy/fantasy.Rprofile")
+if (file.exists("scripts/setup.R")) {
+  source("scripts/setup.R")
+} else if (file.exists("../scripts/setup.R")) {
+  source("../scripts/setup.R")
+}
 
 #---------------------------------------------------------------------------------
 # ESPN stats - FanDuel scoring
@@ -38,7 +42,7 @@ indiv <- within(indiv, {
 #---------------------------------------------------------------------------------
 week <- 10
 
-load(paste0(dfantasy, "week_", week, "_sims.Rda"))
+load(paste0(dsims, "week_", week, "_sims.Rda"))
 
 #---------------------------------------------------------------------------------
 # Teams

@@ -1,0 +1,229 @@
+\documentclass[11pt]{article}
+
+\usepackage{amsmath}
+\usepackage{fancyhdr}
+\usepackage{amssymb}
+\usepackage{geometry}
+\usepackage{bm}
+\usepackage{graphicx}
+\usepackage{setspace}
+\usepackage{multicol}
+\usepackage{listings}
+\usepackage{hyperref}
+
+\onehalfspacing
+
+\hypersetup{colorlinks=true, urlcolor=red, citecolor=blue, linkcolor=red}
+
+\geometry{left=.9in, right=.9in, top=1.1in, bottom=1.1in}
+
+%<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+<<pre, cache=FALSE, echo=FALSE, results='hide', warning=FALSE, message=FALSE>>=
+
+source("~/GoogleDrive/Research/Fantasy/fantasy.Rprofile")
+
+week <- 16
+
+load(paste0(dfantasy, "week_", week, "_sims.Rda")) ; rm(teams)
+
+@ 
+%>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+\begin{document}
+\thispagestyle{fancy}
+
+\lhead{\Large{\bf{FanDuel - Week \Sexpr{week}}}}
+
+\noindent Here are the top ten teams for week \Sexpr{week} based on 500,000 simulations:
+
+%<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+<<team_1, cache=FALSE, echo=FALSE>>=
+
+  dat %>>%
+      subset(id.num %in% unlist(strsplit(team.freq$team[1], "-"))) %>>%
+      select(pos, name, fd.salary, team, home) %>>%
+      arrange(pos) %>>%
+      print
+  
+@
+%>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+%<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+<<team_2, cache=FALSE, echo=FALSE>>=
+
+  dat %>>%
+      subset(id.num %in% unlist(strsplit(team.freq$team[2], "-"))) %>>%
+      select(pos, name, fd.salary, team, home) %>>%
+      arrange(pos) %>>%
+      print
+  
+@
+%>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+%<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+<<team_3, cache=FALSE, echo=FALSE>>=
+
+  dat %>>%
+      subset(id.num %in% unlist(strsplit(team.freq$team[3], "-"))) %>>%
+      select(pos, name, fd.salary, team, home) %>>%
+      arrange(pos) %>>%
+      print
+  
+@
+%>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+%<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+<<team_4, cache=FALSE, echo=FALSE>>=
+
+  dat %>>%
+      subset(id.num %in% unlist(strsplit(team.freq$team[4], "-"))) %>>%
+      select(pos, name, fd.salary, team, home) %>>%
+      arrange(pos) %>>%
+      print
+  
+@
+%>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+%<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+<<team_5, cache=FALSE, echo=FALSE>>=
+
+  dat %>>%
+      subset(id.num %in% unlist(strsplit(team.freq$team[5], "-"))) %>>%
+      select(pos, name, fd.salary, team, home) %>>%
+      arrange(pos) %>>%
+      print
+  
+@
+%>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+%<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+<<team_6, cache=FALSE, echo=FALSE>>=
+
+  dat %>>%
+      subset(id.num %in% unlist(strsplit(team.freq$team[6], "-"))) %>>%
+      select(pos, name, fd.salary, team, home) %>>%
+      arrange(pos) %>>%
+      print
+  
+@
+%>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+%<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+<<team_7, cache=FALSE, echo=FALSE>>=
+
+  dat %>>%
+      subset(id.num %in% unlist(strsplit(team.freq$team[7], "-"))) %>>%
+      select(pos, name, fd.salary, team, home) %>>%
+      arrange(pos) %>>%
+      print
+  
+@
+%>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+%<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+<<team_8, cache=FALSE, echo=FALSE>>=
+
+  dat %>>%
+      subset(id.num %in% unlist(strsplit(team.freq$team[8], "-"))) %>>%
+      select(pos, name, fd.salary, team, home) %>>%
+      arrange(pos) %>>%
+      print
+  
+@
+%>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+%<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+<<team_9, cache=FALSE, echo=FALSE>>=
+
+  dat %>>%
+      subset(id.num %in% unlist(strsplit(team.freq$team[9], "-"))) %>>%
+      select(pos, name, fd.salary, team, home) %>>%
+      arrange(pos) %>>%
+      print
+  
+@
+%>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+%<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+<<team_10, cache=FALSE, echo=FALSE>>=
+
+  dat %>>%
+      subset(id.num %in% unlist(strsplit(team.freq$team[10], "-"))) %>>%
+      select(pos, name, fd.salary, team, home) %>>%
+      arrange(pos) %>>%
+      print
+  
+@
+%>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+\noindent Figure \ref{team.freq} shows the relative frequency that each of the \Sexpr{nrow(team.freq)} optimal teams ended up winning.  Figure \ref{player.freq} shows the relative frequency for those players who belonged on the winning team at least 5\% of the time.
+
+%---------------------------------------	
+\newpage
+\begin{figure}[!t]
+\centering
+\caption{Frequency distribution of optimal fantasy teams} \label{team.freq}
+%<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+<<team_freq, cache=TRUE, echo=FALSE, fig.width=7, fig.height=8.8, out.width='\\textwidth'>>=
+
+# Team frequency plot
+ggplot(data = team.freq) +
+  geom_bar(
+    aes(x = factor(team.code, levels = rev(team.code)), y = freq / (2*iter)),
+    stat = "identity",
+    fill = "grey75",
+    colour = "black") +
+  coord_flip() +
+  theme_classic() +
+  labs(
+    x = "Team",
+    y = "Frequency") +
+  theme(
+    axis.text = element_text(size = 9),
+    axis.title.x = element_text(size = 9, vjust = 0),
+    axis.title.y = element_text(size = 9, vjust = 1),
+    legend.text = element_text(size = 9),
+    legend.title = element_text(size = 9)
+    )
+
+@
+%>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+\end{figure}
+%---------------------------------------
+
+%---------------------------------------
+\newpage
+\begin{figure}[!t]
+\centering
+\caption{Frequency distribution of optimal fantasy players} \label{player.freq}
+%<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+<<player_freq, cache=TRUE, echo=FALSE, fig.width=7, fig.height=8.8, out.width='\\textwidth'>>=
+ 
+# Player frequency plot
+ggplot(data = subset(player.freq, freq / (2*iter) >= 0.05)) +
+  geom_bar(
+    aes(x = factor(name, levels = rev(name)), y = freq / (2*iter), fill = pos),
+    stat = "identity",
+    colour = "black") +
+  scale_fill_manual(
+    name = "Position",
+    values = paste0("grey", seq(20, 100, length.out = 6))) +
+  coord_flip() +
+  theme_classic() +
+  labs(
+    x = "Player",
+    y = "Frequency") +
+  theme(
+    axis.text = element_text(size = 9),
+    axis.title.x = element_text(size = 9, vjust = 0),
+    axis.title.y = element_text(size = 9, vjust = 1),
+    legend.text = element_text(size = 9),
+    legend.title = element_text(size = 9),
+    legend.position = c(0.90, 0.125))
+
+@
+%>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+\end{figure}
+%---------------------------------------
+
+\end{document} 

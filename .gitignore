@@ -1,3 +1,4 @@
+# R data and environment files
 *.RData
 *.Rda
 *.Rhistory
@@ -6,9 +7,25 @@
 *.Rproj
 *.Ruserdata
 *.DS_Store
+
+# Local working directories
 /raw
 /rmd
 /sims
+
+# Local scratch and log files
 parallel_out.txt
 scrape.html
 scrape.js
+
+# LaTeX build artifacts and knitr cache
+*.aux
+*.fls
+*.fdb_latexmk
+*.log
+*.synctex.gz
+*.out
+*.rdb
+*.rdx
+cache/
+**/cache/

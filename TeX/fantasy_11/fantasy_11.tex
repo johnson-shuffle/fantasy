@@ -1,0 +1,171 @@
+\documentclass[10pt]{article}
+
+\usepackage{amsmath}
+\usepackage[colorlinks = true, urlcolor = red, citecolor = blue, linkcolor = red]{hyperref}
+\usepackage{fancyhdr}
+\usepackage{amssymb}
+\usepackage{geometry}
+\usepackage{bm}
+\usepackage[pdftex]{graphicx}
+\usepackage{setspace}
+\usepackage{multicol}
+\usepackage{listings}
+
+\onehalfspacing
+
+\geometry{left=.9in,right=.9in,top=1.1in,bottom=1.1in}
+
+\begin{document}
+\thispagestyle{fancy}
+
+\lhead{\Large{\bf{FanDuel - Week 11}}}
+
+\noindent Here are the top ten teams for week 11 based on 500,000 samples:
+\begin{lstlisting}
+  pos               name fd.salary team home
+1 Def  Arizona Cardinals      4800  ARI    1
+2  PK Stephen Gostkowski      5100   NE    1
+3  QB         Cam Newton      8600  CAR    1
+4  RB     Chris Thompson      5100  WSH    0
+5  RB    Devonta Freeman      9100  ATL    1
+6  TE         Greg Olsen      6400  CAR    1
+7  WR         A.J. Green      8200  CIN    0
+8  WR        James Jones      5200   GB    0
+9  WR   Larry Fitzgerald      7400  ARI    1
+\end{lstlisting}
+
+\begin{lstlisting}
+  pos            name fd.salary team home
+1 Def  Miami Dolphins      4700  MIA    1
+2  PK    Connor Barth      4800   TB    0
+3  QB     Andy Dalton      7900  CIN    0
+4  RB Devonta Freeman      9100  ATL    1
+5  RB     Doug Martin      6600   TB    0
+6  TE      Greg Olsen      6400  CAR    1
+7  WR  Alshon Jeffery      7500  CHI    1
+8  WR   Jeremy Maclin      6300   KC    0
+9  WR    Stefon Diggs      6700  MIN    1
+\end{lstlisting}
+
+\begin{lstlisting}
+  pos             name fd.salary team home
+1 Def   Houston Texans      4500  HOU    1
+2  PK    Justin Tucker      4900  BAL    1
+3  QB       Cam Newton      8600  CAR    1
+4  RB   Danny Woodhead      6400   SD    1
+5  RB     Lamar Miller      7400  MIA    1
+6  TE     Tyler Eifert      6200  CIN    0
+7  WR  DeAndre Hopkins      8900  HOU    1
+8  WR Michael Crabtree      6500  OAK    0
+9  WR    Sammy Watkins      6600  BUF    0
+\end{lstlisting}
+
+\begin{lstlisting}
+  pos              name fd.salary team home
+1 Def Carolina Panthers      4900  CAR    1
+2  PK    Dustin Hopkins      4500  WSH    0
+3  QB        Alex Smith      6200   KC    0
+4  RB       Carlos Hyde      6000   SF    0
+5  RB    Danny Woodhead      6400   SD    1
+6  TE    Rob Gronkowski      8400   NE    1
+7  WR   DeAndre Hopkins      8900  HOU    1
+8  WR       James Jones      5200   GB    0
+9  WR       Julio Jones      9100  ATL    1
+\end{lstlisting}
+
+\begin{lstlisting}
+  pos              name fd.salary team home
+1 Def Carolina Panthers      4900  CAR    1
+2  PK    Dustin Hopkins      4500  WSH    0
+3  QB         Tom Brady      9200   NE    1
+4  RB       Carlos Hyde      6000   SF    0
+5  RB    Danny Woodhead      6400   SD    1
+6  TE      Travis Kelce      5700   KC    0
+7  WR   DeAndre Hopkins      8900  HOU    1
+8  WR       James Jones      5200   GB    0
+9  WR       Julio Jones      9100  ATL    1
+\end{lstlisting}
+
+\begin{lstlisting}
+  pos              name fd.salary team home
+1 Def     Detroit Lions      4300  DET    1
+2  PK      Cairo Santos      5000   KC    0
+3  QB      Tyrod Taylor      7200  BUF    0
+4  RB   Devonta Freeman      9100  ATL    1
+5  RB       Doug Martin      6600   TB    0
+6  TE Martellus Bennett      5200  CHI    1
+7  WR    Alshon Jeffery      7500  CHI    1
+8  WR   DeAndre Hopkins      8900  HOU    1
+9  WR      Tavon Austin      6000  STL    0
+\end{lstlisting}
+
+\begin{lstlisting}
+  pos             name fd.salary team home
+1 Def   Houston Texans      4500  HOU    1
+2  PK    Justin Tucker      4900  BAL    1
+3  QB       Cam Newton      8600  CAR    1
+4  RB   Danny Woodhead      6400   SD    1
+5  RB     Lamar Miller      7400  MIA    1
+6  TE     Tyler Eifert      6200  CIN    0
+7  WR  Jordan Matthews      6300  PHI    1
+8  WR      Julio Jones      9100  ATL    1
+9  WR Michael Crabtree      6500  OAK    0
+\end{lstlisting}
+
+\begin{lstlisting}
+  pos             name fd.salary team home
+1 Def    St Louis Rams      5000  STL    0
+2  PK  Brandon McManus      4800  DEN    0
+3  QB Matthew Stafford      7000  DET    1
+4  RB   Danny Woodhead      6400   SD    1
+5  RB     Lamar Miller      7400  MIA    1
+6  TE      Jordan Reed      5800  WSH    0
+7  WR  DeAndre Hopkins      8900  HOU    1
+8  WR      Julio Jones      9100  ATL    1
+9  WR  Nate Washington      5600  HOU    1
+\end{lstlisting}
+
+\begin{lstlisting}
+  pos             name fd.salary team home
+1 Def   Miami Dolphins      4700  MIA    1
+2  PK     Robbie Gould      4600  CHI    1
+3  QB     Tyrod Taylor      7200  BUF    0
+4  RB  Devonta Freeman      9100  ATL    1
+5  RB      Doug Martin      6600   TB    0
+6  TE     Tyler Eifert      6200  CIN    0
+7  WR   Alshon Jeffery      7500  CHI    1
+8  WR Larry Fitzgerald      7400  ARI    1
+9  WR     Stefon Diggs      6700  MIN    1
+\end{lstlisting}
+
+\begin{lstlisting}
+  pos                    name fd.salary team home
+1 Def          Denver Broncos      5300  DEN    0
+2  PK           Justin Tucker      4900  BAL    1
+3  QB              Derek Carr      7700  OAK    0
+4  RB           David Johnson      4800  ARI    1
+5  RB         Devonta Freeman      9100  ATL    1
+6  TE Austin Seferian-Jenkins      5100   TB    0
+7  WR             Julio Jones      9100  ATL    1
+8  WR        Larry Fitzgerald      7400  ARI    1
+9  WR        Michael Crabtree      6500  OAK    0
+\end{lstlisting}
+
+\noindent Figure \ref{team.freq} shows the relative frequency that each of the 33 optimal teams ended up winning.  Figure \ref{player.freq} shows the relative frequency for those players who belonged on the winning team at least 5\% of the time.
+
+%------------------------------------------------------------------------	
+\begin{figure}[!t]
+\centering
+\caption{Frequency distribution of optimal fantasy teams} \label{team.freq}
+\includegraphics[width=\textwidth]{../figures/team_freq_11.pdf}
+\end{figure}
+%------------------------------------------------------------------------
+
+%------------------------------------------------------------------------	
+\begin{figure}[!t]
+\centering
+\caption{Frequency distribution of optimal fantasy players} \label{player.freq}
+\includegraphics[width=\textwidth]{../figures/player_freq_11.pdf}
+\end{figure}
+%------------------------------------------------------------------------
+\end{document} 

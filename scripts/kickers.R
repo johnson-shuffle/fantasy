@@ -2,7 +2,11 @@
 # Preample
 #---------------------------------------------------------------------------------
 rm(list = ls())
-source("~/GoogleDrive/Research/Fantasy/fantasy.Rprofile")
+if (file.exists("scripts/setup.R")) {
+  source("scripts/setup.R")
+} else if (file.exists("../scripts/setup.R")) {
+  source("../scripts/setup.R")
+}
 
 library(caret)
 library(randomForest)
